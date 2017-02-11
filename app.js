@@ -13,7 +13,7 @@ const router = require('./server/routers');
 
 let app = express();
 
-
+mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://root:root@ds145138.mlab.com:45138/transactions');
 
 app.use(express.static(path.join(__dirname , '/client')));
